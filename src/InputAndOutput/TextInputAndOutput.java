@@ -1,9 +1,15 @@
 package InputAndOutput;
 
+import java.util.Scanner;
+
 public class TextInputAndOutput {
     public static void main(String[] args) {
 
-        System.out.println("Hello and welcome!");
+        // using class "Scanner" to read a username and print it back with a welcome msg
+        Scanner scan = new Scanner(System.in);
+        System.out.print("Please enter your name: ");
+        String name = scan.nextLine();
+        System.out.printf("Hello %s, Welcome to the training!", name);
 
     }
 }
