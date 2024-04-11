@@ -11,5 +11,9 @@ public class TextInputAndOutput {
         String name = scan.nextLine();
         System.out.printf("Hello %s, Welcome to the training!", name);
 
+        /* Expected Output:
+            Please enter your name: Osama Shehata
+            Hello Osama Shehata, Welcome to the training!
+         */
     }
 }
