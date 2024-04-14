@@ -12,7 +12,7 @@ public class FormattingTextBonusExercise {
         String input = scan.nextLine();
         String[] textIntoArray = input.split(" ");
 
-        String newArray = Arrays.stream(textIntoArray).map(word -> {
+        /* String newArray = Arrays.stream(textIntoArray).map(word -> {
             if (word.startsWith("_") && word.endsWith("_")) {
                 return word.replace("_", "").toUpperCase();
             } else if (word.startsWith("#") && word.endsWith("#")) {
@@ -21,6 +21,8 @@ public class FormattingTextBonusExercise {
         }).collect(Collectors.joining(" "));
 
         System.out.println(newArray);
+        */
+
         /* this solution has a problem with words followed by commas or dots, so we use regular expressions
             for an input like :
             "Everybody _said_, it can't be done. Then came one who did not #KNOW# that and just made it."
@@ -28,6 +30,18 @@ public class FormattingTextBonusExercise {
             "Everybody _said_, it can't be done. Then came one who did not know that and just made it."
 
          */
+
+        // Using Regular expressions :
+
+        String newArray = Arrays.stream(textIntoArray).map(word -> {
+            if (word.matches("^_[^_]+_\\W*")) {
+                return word.replaceFirst("^_", "").replaceFirst("_", "").toUpperCase();
+            } else if (word.matches("^#[^#]+#\\W*")) {
+                return word.replaceFirst("#", "").replaceFirst("#", "").toLowerCase();
+            } else return word;
+        }).collect(Collectors.joining(" "));
+
+        System.out.println(newArray);
 
     }
 }
