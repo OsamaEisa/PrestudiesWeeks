@@ -1,4 +1,4 @@
-package DatatypesAndVariables;
+package week1.datatypesAndVariables;
 
 public class DataTypes {
     public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package DatatypesAndVariables;
+package week1.datatypesAndVariables;
 
 import java.util.Arrays;
 import java.util.Scanner;

@@ -1,4 +1,4 @@
-package Operators;
+package week1.operators;
 
 public class OneLineOfCode {
     public static void main(String[] args) {

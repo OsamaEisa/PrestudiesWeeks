@@ -1,4 +1,4 @@
-package InputAndOutput;
+package week1.inputAndOutput;
 
 public class FormattingTextOutput {
     public static void main(String[] args) {
