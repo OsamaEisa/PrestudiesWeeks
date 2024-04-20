@@ -11,6 +11,11 @@ public class Computer {
   private String computerType;
   private boolean hasOs;
 
+  // adding prices
+  private float purchasePrice;
+  private float sellingPrice;
+
+
   // 1. Constructor with default values
   public Computer() {
     this.manufacturerName = "HP";
@@ -32,7 +37,8 @@ public class Computer {
 
   // 3. Constructor with all required values
   public Computer(String manufacturerName, int processorSpeedMHz, int ramGB, int hardDriveGB,
-                  byte numOfUSBPorts, float screenSizeInch, String computerType, boolean hasOs) {
+                  byte numOfUSBPorts, float screenSizeInch, String computerType,
+                  boolean hasOs, float purchasePrice, float sellingPrice) {
 
     // calling the constructor Nr 2 using "this()" and passing required paramGBs
     this(manufacturerName, screenSizeInch, hasOs);
@@ -43,6 +49,8 @@ public class Computer {
     this.hardDriveGB = hardDriveGB;
     this.numOfUSBPorts = numOfUSBPorts;
     this.computerType = computerType;
+    this.purchasePrice = purchasePrice;
+    this.sellingPrice = sellingPrice;
   }
 
   // Getters and Setters
@@ -110,6 +118,26 @@ public class Computer {
   public void hasOs(boolean hasOs) {
     this.hasOs = hasOs;
   }
+
+  public float getPurchasePrice() {
+    return purchasePrice;
+  }
+
+  public void setPurchasePrice(float purchasePrice) {
+    this.purchasePrice = purchasePrice;
+  }
+
+  public float getSellingPrice() {
+    return sellingPrice;
+  }
+
+  public void setSellingPrice(float sellingPrice) {
+    this.sellingPrice = sellingPrice;
+  }
+
+//  public float calculateProfit() {
+//    return this.sellingPrice - this.purchasePrice;
+//  }
 
   // to print Computer details
 
