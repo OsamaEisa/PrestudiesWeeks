@@ -6,8 +6,8 @@ public class Computer {
   private int processorSpeedMHz;
   private int ramGB;
   private int hardDriveGB;
-  private byte numOfUSBPorts;
-  private double screenSizeInch;
+  private byte numOfUSBPorts; // or int
+  private float screenSizeInch; // or double
   private String computerType;
   private boolean hasOs;
 
@@ -18,13 +18,13 @@ public class Computer {
     this.ramGB = 8;
     this.hardDriveGB = 256;
     this.numOfUSBPorts = 4;
-    this.screenSizeInch = 15.5;
+    this.screenSizeInch = 15.5f;
     this.computerType = "laptop";
     this.hasOs = false;
   }
 
   // 2. Constructor with minimum values
-  public Computer(String manufacturerName, double screenSizeInch, boolean hasOs) {
+  public Computer(String manufacturerName, float screenSizeInch, boolean hasOs) {
     this.manufacturerName = manufacturerName;
     this.screenSizeInch = screenSizeInch;
     this.hasOs = hasOs;
@@ -32,7 +32,7 @@ public class Computer {
 
   // 3. Constructor with all required values
   public Computer(String manufacturerName, int processorSpeedMHz, int ramGB, int hardDriveGB,
-                  byte numOfUSBPorts, double screenSizeInch, String computerType, boolean hasOs) {
+                  byte numOfUSBPorts, float screenSizeInch, String computerType, boolean hasOs) {
 
     // calling the constructor Nr 2 using "this()" and passing required paramGBs
     this(manufacturerName, screenSizeInch, hasOs);
@@ -87,11 +87,11 @@ public class Computer {
     this.numOfUSBPorts = numOfUSBPorts;
   }
 
-  public double getScreenSizeInch() {
+  public float getScreenSizeInch() {
     return screenSizeInch;
   }
 
-  public void setScreenSizeInch(double screenSizeInch) {
+  public void setScreenSizeInch(float screenSizeInch) {
     this.screenSizeInch = screenSizeInch;
   }
 
