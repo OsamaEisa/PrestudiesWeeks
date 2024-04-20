@@ -135,9 +135,9 @@ public class Computer {
     this.sellingPrice = sellingPrice;
   }
 
-//  public float calculateProfit() {
-//    return this.sellingPrice - this.purchasePrice;
-//  }
+  public float getProfitPerComputer() {
+    return this.sellingPrice - this.purchasePrice;
+  }
 
   // to print Computer details
 
