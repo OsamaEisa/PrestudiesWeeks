@@ -15,5 +15,9 @@ public class Student extends Person {
   public void tellJoke() {
     System.out.println(this.joke);
   }
+  public void introduce() {
+    super.introduce();
+    this.tellJoke();
+  }
 
 }
