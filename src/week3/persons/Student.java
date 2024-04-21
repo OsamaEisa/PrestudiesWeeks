@@ -15,9 +15,11 @@ public class Student extends Person {
   public void tellJoke() {
     System.out.println(this.joke);
   }
+
+  @Override
   public void introduce() {
-    super.introduce();
-    this.tellJoke();
+    super.introduce(); // call the one in the Person Class
+    this.tellJoke(); // print the corresponding joke
   }
 
 }
