@@ -14,7 +14,7 @@ public class Person {
   }
 
   public void introduce() {
-      System.out.printf("Hello! I'm %s, %d years old, and live in '%s'.", name, age, address);
+      System.out.printf("Hello! I'm %s, %d years old, and live in '%s'.\n", name, age, address);
 
   }
 
